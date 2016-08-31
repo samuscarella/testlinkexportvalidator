@@ -31,7 +31,7 @@ require 'Nokogiri'
 
         Dir.chdir "/Users/#{ENV['USER']}/Desktop/TestLinkExportLogs"
       
-          File.open("#{category}_results.txt", "w+") { |f|
+          File.open("./../#{category}_results.txt", "w+") { |f|
             f.write("You're looking at the results of #{category}:\n\n")
             testSuitesArray.each do |suite|
                 suite.each do |s|
