@@ -31,14 +31,15 @@ require 'logger'
       end
 
       Dir.chdir "/Users/#{ENV['USER']}/Desktop/TestLinkExportLogs"
-
+      
           File.open("testlinkresults.txt", "w+") { |f|
-            f.write("Your are looking at the results of #{category}:\n\n")
+            f.write("You're looking at the results of #{category}:\n\n")
             testSuitesArray.each do |suite|
                 suite.each do |s|
                   f.write("#{s.dig(:suitename)} = (#{s.dig(:testCaseCount)})\n")
                 end
             end
+            puts "Logged successfully..."
           }
     end
   end
