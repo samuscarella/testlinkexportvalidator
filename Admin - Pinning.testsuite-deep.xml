@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Admin - Pinning" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[]]> 
+<keywords><keyword name="Enhancement"><notes><![CDATA[
+Enhancement
+]]></notes></keyword>
+</keywords></details><testsuite name="Pinning" >
+<node_order><![CDATA[0]]></node_order>
+<details><![CDATA[Pinning]]> 
+</details>
+<testcase internalid="35550" name="Pinning_1">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[10360]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>List view - Verify pinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see List view</p>
+<p>2. Hover mouse over any pin placeholder at the end of row, verify tooltip</p>
+<p>3. Click on pin placeholder, verify pinned product</p>
+<p>4. Select that pinned product, perform moving that product, verify locking position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with list view is shown</p>
+<p>2. A tooltip shows &quot;Click and lock a position of this product in this category&quot;</p>
+<p>3. Position of the selected product is pinned</p>
+<p>4. That product position is locked, user cannot move it any way</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35553" name="Pinning_2">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[10361]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>List view - Verify unpinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see List view</p>
+<p>2. Hover mouse over any pinned product at the end of row, verify tooltip</p>
+<p>3. Click on pin icon, verify unpinned position</p>
+<p>4. Select that unpinned product, perform moving that product, verify unlocked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with list view is shown</p>
+<p>2. A tooltip shows &quot;Position of this product is pinned. Click to remove the pin&quot;</p>
+<p>3. Position of the selected product is unpinned</p>
+<p>4. That product position is changed</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35556" name="Pinning_3">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[10362]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>List view - Verify moving/ dragging/dropping products over pinned products</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category - Every page shows 10 products - Some products are pinned at ordinal 3, 5</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see List view</p>
+<p>2. Select a row &gt; input the position of pinned item to textbox then press enter or mouse out of textbox</p>
+<p>3. Select a row &gt; move down/up over pinned position by down/up arrow</p>
+<p>4. Select a row &gt; move over pinned position by dragging/dropping</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with default List view is shown</p>
+<p>2. The number is reversed back to the its value</p>
+<p>3, 4. The selected row is moved down/up over pinned item. The near items will be pushed up/down</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35559" name="Pinning_4">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[10363]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Grid view (directory) - Verify pinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Grid view</p>
+<p>2. Hover mouse over any pin placeholder at header bar of grid cell, verify tooltip</p>
+<p>3. Click on pin placeholder, verify pinned product</p>
+<p>4. Select that pinned product, perform moving that product, verify locked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with grid view (directory) is shown</p>
+<p>2. A tooltip shows &quot;Click and lock a position of this product in this category&quot;</p>
+<p>3. Position of the selected product is pinned</p>
+<p>4. That product position is locked, user cannot move it</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35562" name="Pinning_5">
+	<node_order><![CDATA[5]]></node_order>
+	<externalid><![CDATA[10364]]></externalid>
+	<version><![CDATA[2]]></version>
+	<summary><![CDATA[<p>Grid view (Directory) - Verify unpinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Grid view</p>
+<p>2. Click on pin icon, verify unpinned position</p>
+<p>3. Select that unpinned product, perform moving that product, verify unlocked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with grid view .is shown</p>
+<p>2. Position of the selected product is unpinned</p>
+<p>3. That product position is changed</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35565" name="Pinning_6">
+	<node_order><![CDATA[6]]></node_order>
+	<externalid><![CDATA[10365]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Grid view (Directory) - Verify moving/ dragging/dropping products over pinned products</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category - Every page shows 10 products - Some products are pinned at ordinal 3, 5</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Grid view</p>
+<p>2. Select cell 1, edit the ordinal to 3, then move mouse out of textbox</p>
+<p>3. Press Right arrow and again</p>
+<p>4. Select cell 6, press Left arrow</p>
+<p>5. Continue selecting cell up and down the pinned position and try to click up/down arrow</p>
+<p>6. Reproduce similar steps from 3 - 6 but drag/drop a cell left/right, it will be moved left/right over pinned products but the pinned position 3 and 5 will not be replaced or moved</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with Grid view (directory) is shown</p>
+<p>2. The number is reverted back to the previous number</p>
+<p>3.The selected cell is moved until it touches the pinned position. The pinned position will not be moved to any where</p>
+<p>4. The cell is not moved when it touches the pinned position. The pinned position will not be moved to any where</p>
+<p>5. The selected cell is not moved when it touches the pinned position. The pinned position is not moved to any where</p>
+<p>6. The selected product will be moved left/right over the pinned positions but the pinned positions 3, 5 will not be replaced or moved</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35568" name="Pinning_7">
+	<node_order><![CDATA[7]]></node_order>
+	<externalid><![CDATA[10366]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Grid view (Fit to width) - Verify pinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize &gt; click icon Grid View &gt; click hyperlink Fit to Width</p>
+<p>2. Hover mouse over any pin placeholder at the top of cell, verify tooltip</p>
+<p>3. Click on pin placeholder, verify pinned product</p>
+<p>4. Select that pinned product, perform moving that product, verify locked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with fit to width view is shown</p>
+<p>2. A tooltip shows &quot;Click and lock a position of this product in this category&quot;</p>
+<p>3. Position of the selected product is pinned</p>
+<p>4. That product position is locked, user cannot move it</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35571" name="Pinning_8">
+	<node_order><![CDATA[8]]></node_order>
+	<externalid><![CDATA[10367]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Grid view (Fit to width) - Verify unpinning product</p>]]></summary>
+	<preconditions><![CDATA[<p>Some products exist under a category</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize &gt; click icon Grid View &gt; click hyperlink Fit to Width</p>
+<p>2. Hover mouse over any pinned product at the top of cell, verify tooltip</p>
+<p>3. Click on pin icon, verify unpinned position</p>
+<p>4. Select that unpinned product, perform moving that product, verify unlocked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with fit to width view is shown</p>
+<p>2. A tooltip shows &quot;Position of this product is pinned. Click to remove the pin&quot;</p>
+<p>3. Position of the selected product is unpinned</p>
+<p>4. That product position is changed</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35574" name="Pinning_9">
+	<node_order><![CDATA[9]]></node_order>
+	<externalid><![CDATA[10368]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[Grid view (Fit to width) - Verify moving/ dragging/dropping products over pinned products
+]]></summary>
+	<preconditions><![CDATA[Some products exist under a category - Every page shows 10 products - Some products are pinned ]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize &gt; click icon Grid View &gt; click hyperlink Fit to Width</p>
+<p>2. Select cell 1, edit the ordinal to 3, then move mouse out of textbox or press enter</p>
+<p>3. Select any cell and press left/right/up/down around the pinned position.</p>
+<p>4. Reproduce similar steps from 3 - 6 but drag/drop a row up/down/left/right, it will be moved up/down/left/right over pinned products but the pinned position 3 and 5 will not be replaced</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with fit to width view is shown</p>
+<p>2. The item will be moved to next or previous row of the pinned item</p>
+<p>3. The selected cell is moved left/right/up/down until it touches the pinned position. The pinned position will not be moved to any where.</p>
+<p>4. The selected product will be moved up/down/left/right over the pinned positions but the pinned positions 3, 5 will not be replaced</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35577" name="Pinning_10">
+	<node_order><![CDATA[10]]></node_order>
+	<externalid><![CDATA[10369]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[Grid view (Fit to width) - Verify page style attributes
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Verify the style for a selected product line by simple mouse click</p>
+<p>2. Verify the style of a selected product line by Ctrl/Shift/Draw box</p>
+<p>3. Verify the style for a non-selected product line</p>
+<p>4. Verify the style for a mouse over product line</p>
+<p>5. Verify the style for a pinned product line: non-selected and no mouseover</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. -  Empty pin</p>
+<p>2. -  Empty pin</p>
+<p>3. -  Empty pin</p>
+<p>4. - Empty pin</p>
+<p>5. -  Display pin - Not selected line</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35580" name="Pinning_11">
+	<node_order><![CDATA[11]]></node_order>
+	<externalid><![CDATA[10370]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Thumbnail View - Verify pinning product</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Thumbnail view</p>
+<p>2. Hover mouse over any pin placeholder at the end of row, verify tooltip</p>
+<p>3. Click on pin placeholder, verify pinned product</p>
+<p>4. Select that pinned product, perform moving that product, verify locking position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with thumbnail view is shown</p>
+<p>2. A tooltip shows &quot;Click and lock a position of this product in this category&quot;</p>
+<p>3. Position of the selected product is pinned</p>
+<p>4. That product position is locked, user cannot move it</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35583" name="Pinning_12">
+	<node_order><![CDATA[12]]></node_order>
+	<externalid><![CDATA[10371]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Thumbnail View - Verify unpinning  product</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Thumbnail view</p>
+<p>2. Hover mouse over any pinned product at the end of row, verify tooltip</p>
+<p>3. Click on pin icon, verify unpinned position</p>
+<p>4. Select that unpinned product, perform moving that product, verify unlocked position</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with thumbnail view is shown</p>
+<p>2. A tooltip shows &quot;Position of this product is pinned. Click to remove the pin&quot;</p>
+<p>3. Position of the selected product is unpinned</p>
+<p>4. That product position is changed</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35586" name="Pinning_13">
+	<node_order><![CDATA[13]]></node_order>
+	<externalid><![CDATA[10372]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[Thumbnail View - Verify moving/ dragging/dropping products over pinned product]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; select a product category &gt; Select tab Organize, select to see Thumbnail view</p>
+<p>2. Select row 1, edit the ordinal to 3, then move mouse out of textbox, verify warning message</p>
+<p>3. Press down arrow to ordinal 2, then continue moving down, verify ordinal of pinned product</p>
+<p>4. Continue moving down, verify ordinal of pinned product</p>
+<p>5. Select row 6, press up arrow, verify ordinal of pinned product</p>
+<p>6. Continue moving up, verify ordinal of pinned product</p>
+<p>7. Reproduce similar steps from 3 - 6 but drag/drop a row up/down, it will be moved up/down over pinned products but the pinned position 3 and 5 will not be replaced</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with thumbnail view is shown</p>
+<p>2. A warning message is shown about pinned position</p>
+<p>3.The selected row is moved down to ordinal 4, the position 3 will not be replaced</p>
+<p>4. The selected row is moved down to ordinal 6, the position 5 will not be replaced</p>
+<p>5. The selected row is moved up to ordinal 4, the position 3 will not be replaced</p>
+<p>6. The selected row is moved up to ordinal 2, the position 5 will not be replaced</p>
+<p>7. The selected product will be moved up/down over the pinned positions but the pinned positions 3, 5 will not be replaced</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35589" name="Pinning_14">
+	<node_order><![CDATA[14]]></node_order>
+	<externalid><![CDATA[10373]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify moving unpinned product-complex case</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; Sites &gt; Select a product category &gt; Select tab Organize, select Thumbnail View</p>
+<p>2. Select position number 1, pin it</p>
+<p>3. Unpin position number 1, move it down to ordinal 2</p>
+<p>4. Select ordinal 1, pin it</p>
+<p>5. Select ordinal 2 and 3, move them down to ordinal 5,6</p>]]></actions>
+	<expectedresults><![CDATA[<p>1. Organize tab with thumbnail view is shown</p>
+<p>2. Position number 1 is pinned</p>
+<p>3. Selected item is moved down to ordinal 3</p>
+<p>4. Selected item is pinned</p>
+<p>5. The selected items are moved to ordinal 5, 6 as expectation and the pinned item at the position 1 is still kept</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35592" name="Pinning_15">
+	<node_order><![CDATA[15]]></node_order>
+	<externalid><![CDATA[10374]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Pin items then sort the list</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Admin &gt; navigate to Organize tab of category</p>
+<p>2. Pin some products</p>
+<p>3. Try to sort the list by column header such as Position, Valid, Product Code, Product Name, .... and other custom columns</p>
+<p>4. Pull down menu and select to sort by New Arrivals</p>
+<p>5. Try to sort by other criteria in Sort By in pulled-down menu</p>]]></actions>
+	<expectedresults><![CDATA[<p>3-5. The product list is sorted except the pinned position. Entire pinned position is not changed. The position and ordinal number are not changed until Save Changes is applied</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Automation"><notes><![CDATA[
+Automated
+]]></notes></keyword>
+</keywords></testcase>
+
+<testcase internalid="35595" name="Pinning_16">
+	<node_order><![CDATA[16]]></node_order>
+	<externalid><![CDATA[10375]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[Thumbnail View - Verify the layout properties]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Verify the style for a selected product line by simple mouse click</p>
+<p>2. Verify the style of a selected product line by Ctrl/Shift/Draw box</p>
+<p>3. Verify the style for a non-selected product line 4. Verify the style for a mouse over product line</p>
+<p>5. Verify the style for a pinned product line: non-selected and no mouseover</p>]]></actions>
+	<expectedresults><![CDATA[<p>TBD</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35598" name="Pinning_17">
+	<node_order><![CDATA[17]]></node_order>
+	<externalid><![CDATA[10376]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[Categories - Verify the layout properties]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>1. Verify the style for a selected product line by simple mouse click</p>
+<p>2. Verify the style of a selected product line by Ctrl/Shift/Draw box</p>
+<p>3. Verify the style for a non-selected product line</p>
+<p>4. Verify the style for a mouse over product line</p>
+<p>5. Verify the style for a pinned product line: non-selected and no mouseover</p>]]></actions>
+	<expectedresults><![CDATA[<p>TBD</p>]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite name="Custom Attributes" >
+<node_order><![CDATA[0]]></node_order>
+<details><![CDATA[Custom Attributes]]> 
+</details>
+<testcase internalid="35602" name="Custom_Attributes Prod-8159:PEBL-5539-8">
+	<node_order><![CDATA[18]]></node_order>
+	<externalid><![CDATA[10377]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>View custom attributes</p>]]></summary>
+	<preconditions><![CDATA[<p>Toggle the filter</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[1. Click hyperlink "Change" near the View Columns, verify a list of viewable columns is shown
+2. Add or remove attributes by sign '+' or '-'
+3. Verify columns are added or removed based on setting 
+
+]]></actions>
+	<expectedresults><![CDATA[ 1. A list of columns is expanded
+- Price, Inventory, Status, Rating: static attributes - default selection
+- On Sale, New Arrival, Active date, Sale rank: static attributes
+- Number of reviews, New Item, Product Categories, SKUs, Brand name, Best Sellers,...
+2. The selected columns can be added or removed to view columns list
+3. The columns are added to or removed out on the header columns
+
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35605" name="Custom_Attributes Prod-8159:PEBL-5539-11">
+	<node_order><![CDATA[19]]></node_order>
+	<externalid><![CDATA[10378]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Custom attributes of product</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[1. Admin > Libraries > Attributes > Product > add some custom attributes
+2. Sites > Product Categories > Organize tab > toggle filter 
+3. Verify custom attributes in Sort By list
+4. Choose one of custom attribute to sort by, verify product list sorting in grid 
+
+]]></actions>
+	<expectedresults><![CDATA[ 1. Custom attributes should be added correctly
+2. Filter is toggled
+3. Custom attributes are auto-detected and added to Sort By list
+4. On the first time filtering, products list is sorted in ascending, on the second time, it's sorted in descending
+
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35608" name="Custom_Attributes Prod-8159:PEBL-5539-18">
+	<node_order><![CDATA[20]]></node_order>
+	<externalid><![CDATA[10379]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Thumbnail view - Toggle filter</p>]]></summary>
+	<preconditions><![CDATA[<p>Product Organize tab - Thumbnail view is selected</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA["1. Toggle the filter, verify criteria
+2. Edit some criteria, then reset to default
+3. Toggle the filter again, verify filtering the product list"
+]]></actions>
+	<expectedresults><![CDATA[ "1. A menu is pulled down, default criteria includes:
+- Display: Active & Inactive (default selected), Active Only, Inactive Only
+- Families: Family Leaders and Members (selected by default), Family Leaders Only
+- Sort By: Our picks, New Arrivals, A to Z & Z to A)
+- Reset to Default: hyperlink
+- Apply: hyperlink
+2. All changes are reset to default
+3. Toggle filter is pulled up, the product list is filtered by criteria"
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35611" name="Custom_Attributes Prod-8159:PEBL-5539-19">
+	<node_order><![CDATA[21]]></node_order>
+	<externalid><![CDATA[10380]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>View customer attributes</p>]]></summary>
+	<preconditions><![CDATA[<p>Toggle filtering</p>]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[ "1. Click hyperlink ""Change"" near the View Columns, verify a list of viewable columns is shown
+2. Add or remove attributes by sign '+' or '-'
+3. Verify columns are added or removed based on setting"
+
+]]></actions>
+	<expectedresults><![CDATA["1. A list of columns is expanded
+- Price, Inventory, Status, Rating: static attributes - default selection
+- On Sale, New Arrival, Active date, Sale rank: static attributes
+- Number of reviews, New Item, Product Categories, SKUs, Brand name, Best Sellers,...
+2. The selected columns can be added or removed to view columns list
+3. The columns are added to or removed out on the header columns"
+
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35614" name="Custom_Attributes Prod-8159:PEBL-5539-22">
+	<node_order><![CDATA[22]]></node_order>
+	<externalid><![CDATA[10381]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Custom attributes of product</p>]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA["1. Admin > Libraries > Attributes > Product > add some custom attributes
+2. Sites > Product Categories > Organize tab > toggle filter 
+3. Verify custom attributes in Sort By list
+4. Choose one of custom attribute to sort by, verify product list sorting in grid"
+]]></actions>
+	<expectedresults><![CDATA["1. Custom attributes should be added correctly
+2. Filter is toggled
+3. Custom attributes are auto-detected and added to Sort By list
+4. On the first time filtering, products list is sorted in ascending, on the second time, it's sorted in descending"
+
+
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>
