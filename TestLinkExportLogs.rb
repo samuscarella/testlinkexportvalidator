@@ -38,7 +38,7 @@ require 'Nokogiri'
                   f.write("#{s.dig(:suitename)} = (#{s.dig(:testCaseCount)})\n")
                 end
             end
-            puts "Logged successfully..."
+            puts "Logged #{category} successfully..."
           }
      end
     
