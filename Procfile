@@ -1,1 +1,1 @@
-ruby TestLinkExportLogs.rb
+ruby execute.rb
