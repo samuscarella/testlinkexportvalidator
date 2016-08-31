@@ -1,6 +1,4 @@
 require 'Nokogiri'
-require 'pathname'
-require 'logger'
 
   class TestLinkExportLogs
 
@@ -10,6 +8,7 @@ require 'logger'
     def mapTestSuites(category)
 
       testSuitesArray = Array.new
+      
       Dir.chdir "/Users/#{ENV['USER']}/Desktop/TestLinkExportLogs/#{category}" do
           xmlFiles = Dir["*.xml"]
           xmlFiles.each do |xml|
@@ -30,9 +29,9 @@ require 'logger'
           end
       end
 
-      Dir.chdir "/Users/#{ENV['USER']}/Desktop/TestLinkExportLogs"
+        Dir.chdir "/Users/#{ENV['USER']}/Desktop/TestLinkExportLogs"
       
-          File.open("testlinkresults.txt", "w+") { |f|
+          File.open("#{category}_results.txt", "w+") { |f|
             f.write("You're looking at the results of #{category}:\n\n")
             testSuitesArray.each do |suite|
                 suite.each do |s|
@@ -41,5 +40,6 @@ require 'logger'
             end
             puts "Logged successfully..."
           }
-    end
+     end
+    
   end
